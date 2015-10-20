@@ -36,88 +36,100 @@
   </header>
 
   <div class="container">
-    <h2>средства для ухода</h2>
-    <nav class="breadcrumbs">
-      <ul>
-        <li>
-          <a href="index.html">главная</a><!--для ссылок здесь нужен класс, я думаю или в css .breadcrums a {} ? -->
-        </li>
-        <li>
-          <a href="catalog.html">магазин</a>
-        </li>
-        <li class="active"><!--в главном меню тоже есть класс active, изменить здесь имя класса? или в css сделать .breadcrumbs .active {}, как лучше? -->
-          <a href="#">средства для ухода</a>
-        </li>
-      </ul>
-    </nav>
-    <section class="filters">
-      <form action="" method="get"> <!--для поисковой формы get используют или здесь пост лучше? -->
-        <div class="filter">
-          <h3 class="list-title">ПРОИЗВОДИТЕЛИ</h3>
-          <label><input type="checkbox" name="baxter-of-california" checked>baxter of california</label>
+    <h1 class="main-title">Средства для ухода</h1>
+    <ul class="breadcrumbs">
+      <li>
+        <a href="index.html">Главная</a>
+      </li>
+      <li>
+        <a href="catalog.html">Магазин</a>
+      </li>
+      <li class="active">Средства для ухода</li>
+    </ul>
+    
+    <div class="catalog clearfix">
+      <aside class="filter">
+        <form action="" method="">
+          <h2 class="filter-title">Произволители</h2>
+          
+          <input type="checkbox" name="baxter-of-california" id="ch1" checked>
+          <label for="ch1">baxter of california</label>
+          
           <label><input type="checkbox" name="mr-natty">mr natty</label>
           <label><input type="checkbox" name="suavecito" checked>suavecito</label>
           <label><input type="checkbox" name="malin+goetz">malin+goetz</label>
           <label><input type="checkbox" name="murray's">murray's</label>
           <label><input type="checkbox" name="american-crew" checked>american crew</label>
-          <!--name можно писать с пробелами?  -->
-        </div>
-        <div class="filter">
-          <h3 class="list-title">ГРУППЫ ТОВАРОВ</h3>
+  
+  
+          <h2 class="filter-title">ГРУППЫ ТОВАРОВ</h2>
           <label><input type="radio" name="product-group" value="for-shave">бритвенные принадлежности</label>
           <label><input type="radio" name="product-group" value="for-care" checked>средства для ухода</label>
           <label><input type="radio" name="product-group" value="accessories">аксессуары</label>
+          <button type="submit" class="btn btn-filter">показать</button>
+        </form>
+      </aside>
+  
+      <div class="catalog-items">
+        
+        <article class="catalog-item">
+          <figure class="catalog-item-image">
+            <img src="" width="" height="" alt="Набор для путешествий BAXTER OF CALIFORNIA">
+          </figure>
+          <div class="catalog-item-description">
+            <h2 class="title-item">Набор для путешествий<span>BAXTER OF CALIFORNIA</span></h2>
+            <div class="price">
+              <div class="price-text">2 900 РУБ.</div>
+              <a class="btn btn-price" href="#">КУПИТЬ</a>
+            </div>
+          </div>
+        </article>
+        
+        <div class="catalog-item">
+          <div class="image"><img src="" width="" height="" alt="Увлажняющий кондиционер BAXTER OF CALIFORNIA"></div>
+            <div class="title-item">Увлажняющий кондиционер<br>BAXTER OF CALIFORNIA</div>
+            <div class="price">750 РУБ.</div>
+            <a class="btn buy-btn" href="#">КУПИТЬ</a>
         </div>
-        <button type="submit" class="btn btn-filter">показать</button>
-<!--опять сделал кнопу по Сашиному примеру, есть вообще отличие с - <input type="submit" value="показать">  -->
-      </form>
-    </section>
-
-    <section class="catalog-items">
-      <div class="catalog-item"><!--Картинка товара будет фоном? -->
-        <div class="image"><img src="" width="" height="" alt="Набор для путешествий BAXTER OF CALIFORNIA"></div><!--где взять размеры картинок?  -->
-          <div class="title-item">Набор для путешествий<br>BAXTER OF CALIFORNIA<!--Можно тут br использовать? --></div>
-          <div class="price">2 900 РУБ.</div>
-          <a class="btn buy-btn" href="#">КУПИТЬ</a>
+        <div class="catalog-item">
+          <div class="image"><img src="" width="" height="" alt="Гель для волос SUAVECITO"></div>
+            <div class="title-item">Гель для волос<br>SUAVECITO</div>
+            <div class="price">290 РУБ.</div>
+            <a class="btn buy-btn" href="#">КУПИТЬ</a>
+        </div>
+        <div class="catalog-item">
+          <div class="image"><img src="" width="" height="" alt="Глина для укладки волос AMERICAN CREW"></div>
+            <div class="title-item">Глина для укладки волос<br>AMERICAN CREW</div>
+            <div class="price">500 РУБ.</div>
+            <a class="btn buy-btn" href="#">КУПИТЬ</a>
+        </div>
+        <div class="catalog-item">
+          <div class="image"><img src="" width="" height="" alt="Гель для волос AMERICAN CREW"></div>
+            <div class="title-item">Гель для волос<br>AMERICAN CREW</div>
+            <div class="price">350 РУБ.</div>
+            <a class="btn buy-btn" href="#">КУПИТЬ</a>
+        </div>
+        <div class="catalog-item">
+          <div class="image"><img src="" width="" height="" alt="Набор для бритья BAXTER OF CALIFORNIA"></div>
+            <div class="title-item">Набор для бритья<br>BAXTER OF CALIFORNIA</div>
+            <div class="price">3 900 РУБ.</div>
+            <a class="btn buy-btn" href="#">КУПИТЬ</a>
+        </div>
+        
+        <!-- по принципу хлебных крошек 
+          ul.pagination
+            li
+              a.pagination-link
+        -->
+        
+        <div class="catalog-nav">
+          <button class="btn page-number">1</button>
+          <button class="btn page-number active">2</button>
+          <button class="btn page-number">3</button>
+          <button class="btn page-number">4</button>
+        </div>
       </div>
-      <div class="catalog-item">
-        <div class="image"><img src="" width="" height="" alt="Увлажняющий кондиционер BAXTER OF CALIFORNIA"></div>
-          <div class="title-item">Увлажняющий кондиционер<br>BAXTER OF CALIFORNIA</div>
-          <div class="price">750 РУБ.</div>
-          <a class="btn buy-btn" href="#">КУПИТЬ</a>
-      </div>
-      <div class="catalog-item">
-        <div class="image"><img src="" width="" height="" alt="Гель для волос SUAVECITO"></div>
-          <div class="title-item">Гель для волос<br>SUAVECITO</div>
-          <div class="price">290 РУБ.</div>
-          <a class="btn buy-btn" href="#">КУПИТЬ</a>
-      </div>
-      <div class="catalog-item">
-        <div class="image"><img src="" width="" height="" alt="Глина для укладки волос AMERICAN CREW"></div>
-          <div class="title-item">Глина для укладки волос<br>AMERICAN CREW</div>
-          <div class="price">500 РУБ.</div>
-          <a class="btn buy-btn" href="#">КУПИТЬ</a>
-      </div>
-      <div class="catalog-item">
-        <div class="image"><img src="" width="" height="" alt="Гель для волос AMERICAN CREW"></div>
-          <div class="title-item">Гель для волос<br>AMERICAN CREW</div>
-          <div class="price">350 РУБ.</div>
-          <a class="btn buy-btn" href="#">КУПИТЬ</a>
-      </div>
-      <div class="catalog-item">
-        <div class="image"><img src="" width="" height="" alt="Набор для бритья BAXTER OF CALIFORNIA"></div>
-          <div class="title-item">Набор для бритья<br>BAXTER OF CALIFORNIA</div>
-          <div class="price">3 900 РУБ.</div>
-          <a class="btn buy-btn" href="#">КУПИТЬ</a>
-      </div>
-      <div class="catalog-nav">
-        <button class="btn page-number">1</button>
-        <button class="btn page-number active">2</button><!--Опять вопрос, что делать с классом active? назвать иначе? -->
-        <button class="btn page-number">3</button>
-        <button class="btn page-number">4</button>
-  <!--скопировал кнопки навигации из индекс.хтмл, так Саша сделал, только не понял почему не <a>?  -->
-      </div>
-    </section>
+    </div>
   </div>
 
   <footer class="main-footer">
