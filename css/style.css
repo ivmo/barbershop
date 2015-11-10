@@ -1,14 +1,21 @@
 body {
-  min-width: 940px;
-  margin: 0;
-  padding: 0;
+  min-width: 960px;
 
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 24px;
-  font-family: ptsans narrowbold verdana sans-serif;
-  color: #000000;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: #111111 url("img/body-bg.jpg") no-repeat center top;
 }
+
+.inner-page {
+  color: #ffffff;
+  background: #111111 url("img/");
+}
+/*заголовки*/
 .feature-title {
   font-weight: bold;
   font-size: 30px;
@@ -22,6 +29,44 @@ body {
   color: #000000;
 }
 
+.main-title {
+  font-size: 30px;
+/*высота строки правильная? в макете авто стоит*/
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+/*конец заголовков*/
+
+/*хлебные крошки*/
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+  font-size: 0;
+  list-style: none;
+}
+.breadcrumbs li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 24px;
+}
+.breadcrumbs a {
+  color: #000000;
+  text-decoration: none;
+
+}
+
+.active-breadcrumbs {
+  color: rgba(0, 0, 0, 0.3);
+}
+/*конец крошек*/
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 
 .clearfix:after {
   content: "";
@@ -31,152 +76,402 @@ body {
 }
 /*начало для шапки*/
 .main-header {
-  background: #000000;
-}
+  margin-bottom: 60px;
 
-.container {
-  width: 960px;
-  margin: 0 auto;
+  background: #000000;
 }
 
 .main-navigation {
   float: left;
-  width: 700px;
+
+  width: 780px;
 }
 
 .user-block {
   float: right;
-  width: 90px;
+
+  max-width: 140px;
+}
+
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+  list-style: none;
+}
+
+.main-navigation li {
+  display: inline-block;
+
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.main-navigation a {
+  display: block;
+  padding: 25px 20px;
+
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.main-navigation a:hover {
+  background: #242424;
+}
+
+.main-navigation .active a {
+  position: relative;
+}
+
+.main-navigation .active a:hover {
+  background: none;
+}
+
+.main-navigation .active a:after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+
+  height: 5px;
+
+  background: white;
+}
+
+.login {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: top;
+  padding: 25px 20px;
+  padding-left: 50px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+
+  color: #ffffff;
+}
+
+.login:hover {
+  background: #242424;
+}
+
+.login:before {
+  content: "";
+
+  position: absolute;
+  top: 28px;
+  left: 20px;
+
+  width: 18px;
+  height: 18px;
+
+  background: transparent url("img/sprite.png") no-repeat;
+  background-position: 0 -212px;
+}
+
+.login:hover:before {
+  opacity: 0.3;
 }
 /*конец шаки*/
 
-.main-index-container {
-  /*центровщик body */
-  width: 960px;
-  margin-top: 55px;
-  margin-right: auto;
-  margin-bottom: 65px;
-  margin-left: auto;
-}
 /*начало body index.html*/
 .logo {
   width: 368px;
+  height: 204px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+}
+
+.logo img {
+  width: 368px;
+  height: 204px;
 }
 
 .features-row {
-  margin-bottom: 50px;
-  padding: 0 15px;
+  margin-bottom: 80px;
 }
 
 .features-item {
   float: left;
-  width: 290px;
+
+  width: 300px;
   margin-right: 20px;
 
   text-align: center;
 }
 
 .features-item:last-child {
-  margin-right: 0;
+   margin-right: 0;
+}
+
+.features-title {
+  position: relative;
+
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.features-item p {
+  margin: 10px;
+}
+
+.features-title:after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+
+  background: #ffffff;
+  transform: rotate(45deg);
 }
 
 .index-content {
-  margin-bottom: 30px;
-  padding: 55px 80px;
-}
+  margin-bottom: 35px;
+  padding: 50px 80px;
 
-.content-column-left,
-.content-column-right {
-  width: 300px;
+  color: #000000;
+  background: url("img/index-content-shadow.png") no-repeat center, #f8f5f2 url("img/pattern-white.jpg");
 }
 
 .content-column-left {
   float: left;
+  width: 350px;
 }
 
 .content-column-right {
   float: right;
+  width: 300px;
+}
+
+.content-column-title {
+  margin: 0;
+  margin-bottom: 35px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.news-preview {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-preview li {
+  margin-bottom: 25px;
+}
+
+.news-preview time {
+  text-transform: none;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 33px;
+  margin-right: 16px;
+
+  font-size: 14px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #ffffff;
+  background: #000000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background: #663d15;
+}
+
+.btn:disabled {
+  cursor: default;
+  opacity: .5;
+}
+
+.btn:disabled:hover {
+  background: #000000;
+}
+
+.gallery {
+  position: relative;
+  height: 260px;
 }
 
 .gallery-content {
+  height: 164px;
   margin: 0;
-  padding: 0;
-  /*обнулил отступы для картинки, иначе вылезает справа за границу блока*/
+
+  border: 7px solid white;
+  background: #ccc;
 }
 
+.gallery-content img {
+  width: 286px;
+  height: 164px;
+}
+
+.gallery .btn {
+  position: absolute;
+  bottom: 0;
+
+  width: 140px;
+  margin: 0;
+}
+
+.gallery-prev {
+  left: 0;
+}
+
+.gallery-next {
+  right: 0;
+}
+
+.index-content p {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.appointment-form  input {
+  float: left;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 106px;
+  padding: 10px 15px;
+  border: 2px solid #000000;
+
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  color: #000000;
+  background: #f9f6f3;
+  outline: none;
+}
+
+.appointment-form  input:focus {
+  border: 2px solid #663d15;
+}
+
+.appointment-form  input:nth-child(2n) {
+  margin-right: 0;
+}
+
+.appointment-form .btn {
+  clear: both;
+  width: 100%;
+}
 /*конец body index.html*/
 
 /*начало catalog.html*/
-.main-cont {
-  width: 960px;
-  margin-top: 60px;
-  margin-right: auto;
-  margin-bottom: 50px;
-  margin-left: auto;
-}
-.breadcrumbs {
-  margin-bottom: 60px;
+.catalog {
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
 }
 
 .filter {
   float: left;
   width: 180px;
 }
+
+.filter-title {
+  margin-bottom: 30px;
+  color: #000000;
+  font-size: 24px;
+  line-height: 24px;
+}
+
 .catalog-items {
   float: right;
-  width: 760px;
-
+  width: 700px;
+  position: relative;
   font-size: 0;
-
-  outline: 1px solid black;
+  margin-bottom: 45px;
 }
+
 .catalog-item {
   display: inline-block;
   width: 220px;
+  vertical-align: top;
   margin-right: 20px;
   margin-bottom: 20px;
 
   font-size: 14px;
   line-height: 18px;
-
-  outline: 1px solid black;
 }
 .catalog-item-image {
   margin: 0;
 }
-/*как отодвинуть пагинацию на 40пх вниз, маргин топ писать?*/
+/*как правильно отодвинуть пагинацию вниз, маргин топ написал ей ?*/
 .pagination {
-  font-size: 14px;
-}
-/*конец catalog.html*/
-/*начало catalog-item.html*/
-.item {
- width: 960px;
- margin-bottom: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 0;
+  margin-top: 45px;
 
 }
+
+.pagination-page {
+  display: inline-block;
+  margin-right: 5px;
+  color: #ffffff;
+  background: #000000;
+}
+
+/*конец catalog.html*/
+
+/*начало catalog-item.html*/
+.item {
+  color: #000000;
+}
+
 .item-gallery {
   float: left;
   width: 480px;
-
 }
 .item-gallery-big {
   width: 460px;
   height: 498px;
-  margin: 0 0 20px 0;
-
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
 }
 .item-gallery-preview {
 
   /*ширину и высоту задавать?*/
-
 }
 .item-img {
+  display: inline-block;
   margin-right: 20px;
-  /*занулил размер шрифта, мешали пробелы*/
   font-size: 0;
+  width: 140px;
+  height: 149px;
 }
 .item-img:last-child {
   margin-right: 0;
@@ -185,8 +480,8 @@ body {
 .item-content {
   float: right;
   width: 390px;
-  padding: 20px 10px;
-  outline: 1px solid black;
+  padding: 20px 0;
+
 }
 .item-description {
   margin-bottom: 70px;
@@ -194,59 +489,137 @@ body {
 .stock {
   display: inline;
   width: 100px;
-  margin-right: 140px
+  margin-right: 140px;
 }
 .article {
   display: inline;
   width: 130px;
-
+  color: rgba(0, 0, 0, 0.3);
 }
 .item-info {
-  margin: 40px 0;
+  margin-bottom: 40px;
 }
 .price {
   width: 190px;
-  margin-top: 40px;
-  margin-bottom: 70px;
+  font-size: 0;
 }
 .price-text {
-display: inline-block;
+  display: inline-block;
+  font-size: 14px;
+  background: #e5e5e5;
+  padding: 10px auto;
+  text-align: center;
 }
 .btn {
-display: inline-block;
+  display: inline-block;
+  font-size: 14px;
+  color: #ffffff;
+  background: #000000;
+  padding: 10px auto;
+  text-align: center;
 }
-.btn-price {
 
-}
 .item-title {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  font-size: 24px;
 }
-.item-list {
-  
-}
+
 /*конец catalog-item.html*/
+
 /*начало подвала*/
 .main-footer {
-  padding: 60px 0;
+  margin-top: 60px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  background: #252525 url("img/pattern-black.jpg");
 }
 
 .footer-contacts {
   float: left;
-  width: 310px;
-  margin-right: 90px;
+
+  width: 320px;
+  margin-right: 80px;
+}
+
+.footer-contacts a {
+  color: #fff;
 }
 
 .footer-social {
   float: left;
-  width: 190px;
-
   text-align: center;
 }
 
 .footer-copyright {
   float: right;
-  width: 140px;
+
+  max-width: 320px;
+}
+
+.footer-contacts a:hover {
+  text-decoration: none;
+}
+
+.footer-social p {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.social-btn {
+  margin: 0 2px;
+  display: inline-block;
+  vertical-align: top;
+  width: 43px;
+  height: 43px;
+
+  font-size: 0;
+  text-decoration: none;
+
+  background: #000 url("img/sprite.png") no-repeat center;
+}
+
+.social-btn:hover {
+    background-color: #fff;
+}
+
+.social-btn-vk {
+  background-position: 9px -968px;
+}
+
+.social-btn-fb {
+  background-position: 16px -691px;
+}
+
+.social-btn-inst {
+  background-position: 11px -832px;
+}
+
+.social-btn-vk:hover {
+  background-position: 9px -902px;
+}
+
+.social-btn-fb:hover {
+  background-position: 16px -619px;
+}
+
+.social-btn-inst:hover {
+  background-position: 11px -762px;
+}
+
+.footer-copyright p {
+  margin: 0;
+  margin-bottom: 15px;
 
   text-align: center;
+}
+
+.footer-copyright .btn {
+    margin-right: 0;
+}
+
+.footer-copyright .btn:hover {
+  color: #000;
+  background: #fff;
 }
 /*конец подвала*/
